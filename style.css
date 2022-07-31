@@ -1,0 +1,26 @@
+.grid{
+    background-color: rgb(58, 129, 0);
+    height:600px;
+    width:600px;
+    display:flex;
+    flex-wrap:wrap;
+
+
+}
+
+.square{
+    background-color: rgb(165, 85, 11);
+    border: solid black 1px;
+    height:198px;
+    width:198px;
+    border-radius: 50%;
+    box-shadow:inset 0 10px 0 7px rgb(53 21 6);
+    position: relative;
+    
+}
+
+.mole{
+    background-color: antiquewhite;
+    z-index: +1;
+}
+
