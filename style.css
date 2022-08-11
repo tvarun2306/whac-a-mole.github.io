@@ -20,7 +20,18 @@
 }
 
 .mole{
-    background-color: antiquewhite;
-    z-index: +1;
+    /* background-color: antiquewhite; */
+    background-image:url(mole.png) ;
+    z-index: +1; 
+}
+
+.cursor{
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left:10px;
+    background-image:url(hammer.png);
+    background-size: 100% 100%;
 }
 
