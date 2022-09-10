@@ -1,40 +1,37 @@
-const squares = document.querySelectorAll('.square')
-const mole= document.querySelector('.mole')
-const score= document.querySelector('#score')
-const timeLeft= document.querySelector('#time')
 
 
-
-
-
-
-
-
-
+  const squares = document.querySelectorAll('.square');
+const mole= document.querySelector('.mole');
+const score= document.querySelector('.score');
+const timeLeft= document.querySelector('#time');
+const moleSmashed=document.querySelector('.moleSmashed');
 
 let result=0;
 let hitMole;
+let SmashedMole;
 
 function randomSquare(){
     
    squares.forEach(square=>{
     square.classList.remove('mole');
-    
+    square.classList.remove('moleSmashed');
   })
 
   let randomsquare= squares[Math.floor(Math.random()*9)];
   randomsquare.classList.add('mole');
-  hitMole=randomSquare.id;
   
+  hitMole=randomsquare.innerText;
+  console.log(hitMole);
+  SmashedMole=randomsquare;
 
 }
-
 
 
 
 function moveMole(){
     let moveTime = null;
     moveTime=setInterval(randomSquare, 1000);
+    
 }
 
 moveMole();
@@ -42,20 +39,29 @@ moveMole();
 squares.forEach(square=>{
   square.addEventListener("click", () =>
   {
-    // console.log(square.id);
+    
+    
 
-    if(square.id==hitMole)
+    if(square.id===hitMole)
     {
-      result++;
-      
-      
-      console.log(score.textContent);
+      result++;      
+      score.innerText=result;
+      SmashedMole.classList.add('moleSmashed');
       hitMole=null;
-    }score.textContent=result;
+      
+    }
+    
+    
 
   })
+  
+
 })
   
+
+
+
+
 
 
 

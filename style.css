@@ -16,13 +16,26 @@
     border-radius: 50%;
     box-shadow:inset 0 10px 0 7px rgb(53 21 6);
     position: relative;
+    color:rgb(58, 129, 0);
     
 }
 
 .mole{
+    object-fit: contain;
     /* background-color: antiquewhite; */
-    background-image:url(mole.png) ;
+    background-size:160px 160px  ;
+    background-image: url(mole.png);
     z-index: +1; 
+}
+.moleSmashed{
+    
+    object-fit: contain;
+    /* background-color: antiquewhite; */
+    background-size:160px 160px  ;
+    background-image: url(mole-whacked.png);
+    z-index: +1; 
+    border-radius: 50%;
+    
 }
 
 .cursor{
