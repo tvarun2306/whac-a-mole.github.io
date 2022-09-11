@@ -1,6 +1,6 @@
 
 
-  const squares = document.querySelectorAll('.square');
+const squares = document.querySelectorAll('.square');
 const mole= document.querySelector('.mole');
 const score= document.querySelector('.score');
 const timeLeft= document.querySelector('#time');
@@ -9,6 +9,8 @@ const moleSmashed=document.querySelector('.moleSmashed');
 let result=0;
 let hitMole;
 let SmashedMole;
+let currentTime=60;
+let moveTime = null;
 
 function randomSquare(){
     
@@ -21,7 +23,7 @@ function randomSquare(){
   randomsquare.classList.add('mole');
   
   hitMole=randomsquare.innerText;
-  console.log(hitMole);
+  // console.log(hitMole);
   SmashedMole=randomsquare;
 
 }
@@ -29,8 +31,8 @@ function randomSquare(){
 
 
 function moveMole(){
-    let moveTime = null;
-    moveTime=setInterval(randomSquare, 1000);
+    
+    moveTime=setInterval(randomSquare, 750);
     
 }
 
@@ -47,17 +49,29 @@ squares.forEach(square=>{
       result++;      
       score.innerText=result;
       SmashedMole.classList.add('moleSmashed');
-      hitMole=null;
-      
+      hitMole=null;    
     }
-    
-    
-
   })
-  
-
 })
+
+function countdown(){
+
+  if(currentTime>0)
+  {
+    currentTime--;
+    timeLeft.innerText=currentTime;
+
+  }
+  else{
+    document.addEventListener(alert('Total Score ='+' '+score.innerText));
+    clearInterval(countdown);
+    clearInterval(moveTime);
+    score.innerText=0;
+    timeLeft=60;
+  }
   
+}
+setInterval(countdown,1000);
 
 
 
@@ -68,10 +82,7 @@ squares.forEach(square=>{
 
 
 
-// const cursor=document.querySelector('.cursor')
-// window.addEventListener('mousemove', e=>{
-//     cursor.style.top= e.pageY +'px';
-//     cursor.style.left= e.pageX +'px';
 
-// })
+
+
 
