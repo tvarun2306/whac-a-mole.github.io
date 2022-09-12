@@ -21,20 +21,23 @@
     position: relative;
     color:rgb(58, 129, 0);
     
+    
 }
 
 .mole{
+    
     object-fit: contain;
     
-    background-size:160px 160px  ;
+    background-size:198px 198px  ;
     background-image: url(mole.png);
     z-index: +1; 
+    
 }
 .moleSmashed{
     
     object-fit: cover;
     
-    background-size:160px 160px  ;
+    background-size:198px 198px  ;
     background-image: url(mole-whacked.png);
     z-index: +1; 
     

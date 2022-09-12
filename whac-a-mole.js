@@ -68,6 +68,7 @@ function countdown(){
     clearInterval(moveTime);
     score.innerText=0;
     timeLeft=60;
+    
   }
   
 }
