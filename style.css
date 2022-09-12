@@ -4,6 +4,9 @@
     width:600px;
     display:flex;
     flex-wrap:wrap;
+    box-shadow:   5px 5px 5px rgb(53 21 6);
+    margin:20px;
+    border-radius: 15px;
 
 
 }
@@ -56,7 +59,9 @@ body{
     padding-right: 250px;
     border-radius: 15px;
     color:rgb(59, 54, 3);
-    margin: 2px;
+    
+    box-shadow:   5px 5px 5px rgb(53 21 6);
+    margin:20px;
     
 }
 
@@ -70,7 +75,9 @@ body{
     padding-right: 225px;
     border-radius: 15px;
     color:rgb(87, 65, 7);
-    margin: 2px;
+    box-shadow:   5px 5px 5px rgb(53 21 6);
+    margin:20px;
+    
 }
 
 
