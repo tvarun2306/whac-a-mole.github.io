@@ -63,7 +63,7 @@ function countdown(){
 
   }
   else{
-    document.addEventListener(alert('Total Score ='+' '+score.innerText));
+    document.addEventListener(alert('!!!GAME OVER!!!.....Total Score ='+' '+score.innerText));
     clearInterval(countdown);
     clearInterval(moveTime);
     score.innerText=0;
