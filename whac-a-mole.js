@@ -54,6 +54,15 @@ squares.forEach(square=>{
   })
 })
 
+function restart(){
+  clearInterval(countdown);
+    clearInterval(moveTime);
+  result=0;
+  score.innerText=result;
+  currentTime=60;
+  moveMole();
+}
+
 function countdown(){
 
   if(currentTime>0)
@@ -63,13 +72,15 @@ function countdown(){
 
   }
   else{
-    document.addEventListener(alert('!!!GAME OVER!!!.....Total Score ='+' '+score.innerText));
+    if(currentTime<0){
+      currentTime=60;
+    }
     clearInterval(countdown);
     clearInterval(moveTime);
-    score.innerText=0;
-    timeLeft=60;
-    
+    // document.addEventListener(alert('!!!GAME OVER!!!.....Total Score ='+' '+score.innerText));
   }
+
+  
   
 }
 setInterval(countdown,1000);
